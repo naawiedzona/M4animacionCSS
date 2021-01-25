@@ -1,0 +1,56 @@
+body{
+    background-color: rgb(253, 206, 214);
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* bounceX / bounceY */
+.bounceX{
+    animation: bounceX 2.5s linear infinite alternate;
+}
+.bounceY{
+    animation: bounceY 0.8s ease-in infinite alternate;
+}
+
+
+/* la pelota */
+
+
+.ball{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(206, 38, 38);
+}
+
+/* keyframes */
+
+@keyframes bounceX{
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(calc(100vw - 10vmin));
+    }
+}
+
+@keyframes bounceY{
+    0%{
+        transform: translateY(0px);
+        height: 50px;
+        width: 50px;
+    }
+    50%{
+        height: 30px;
+        width: 55px;
+    }
+   75%{
+       height: 50px;
+       width: 57px;
+   }
+    100%{
+        transform: translateY(calc(100vh - 5vmin));
+    }
+}
